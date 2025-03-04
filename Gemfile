@@ -43,6 +43,8 @@ gem "thruster", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
@@ -65,3 +67,4 @@ end
 gem 'httparty' # For making HTTP requests
 gem 'sidekiq'  # For background job processing
 gem 'whenever', require: false # For scheduling tasks
+gem 'service'
