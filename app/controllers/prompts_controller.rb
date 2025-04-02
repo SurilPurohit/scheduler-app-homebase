@@ -2,7 +2,7 @@
 class PromptsController < ApplicationController
   def create
     prompt = params[:prompt]
-    grok_service = GrokService.new(ENV['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'])
+    grok_service = GrokService.new(ENV[GROK_API_KEY])
     response = grok_service.generate_completion(prompt)
     if response.success?
       @completion = response.parsed_response['choices'].first['text']
