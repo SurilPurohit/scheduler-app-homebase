@@ -5,7 +5,7 @@ class GrokService
 
   def initialize(api_key)
     @headers = {
-      "Authorization" => "Bearer #{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}",
+      "Authorization" => "Bearer #{GROK_API_KEY}",
       "Content-Type" => "application/json"
     }
   end
